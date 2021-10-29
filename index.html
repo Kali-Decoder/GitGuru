@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git Guru</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="git.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#"
+        ><i class="fab fa-github fa-2x mx-2"></i><i class="fab fa-git"></i>
+        <strong class="text-primary">Guru</strong></a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html"
+              ><i class="fab fa-github-alt mx-2 mt-1"></i>Home
+              <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#footer"
+              ><i class="fab fa-github-alt mx-2 mt-1"></i>About Us</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallary.html"
+              ><i class="fab fa-github-alt mx-2 mt-1"></i>Gallary</a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fab fa-github-alt mx-2 mt-1"></i>Git Commands
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#setup"
+                ><i class="fab fa-github-alt mx-2 mt-1"></i>Setup</a
+              >
+              <a class="dropdown-item" href="#setupinit"
+                ><i class="fab fa-github-alt mx-2 mt-1"></i>Setup and Init</a
+              >
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#stage"
+                ><i class="fab fa-github-alt mx-2 mt-1"></i>Stage And
+                Snapshot</a
+              >
+              <a class="dropdown-item" href="#branch"
+                ><i class="fab fa-github-alt mx-2 mt-1"></i>Branch And Merge</a
+              >
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#inspect"
+                ><i class="fab fa-github-alt mx-2 mt-1"></i>Inspect And
+                Compare</a
+              >
+              <a class="dropdown-item" href="#update"
+                ><i class="fab fa-github-alt mx-2 mt-1"></i>Share And Update</a
+              >
+              <a class="dropdown-item" href="#history"
+                ><i class="fab fa-github-alt mx-2 mt-1"></i>Rewrite History</a
+              >
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#tracking"
+                ><i class="fab fa-github-alt mx-2 mt-1"></i>Tracking Path
+                Changes</a
+              >
+              <a class="dropdown-item" href="#history"
+                ><i class="fab fa-github-alt mx-2 mt-1"></i>Rewrite History</a
+              >
+              <a class="dropdown-item" href="#temp"
+                ><i class="fab fa-github-alt mx-2 mt-1"></i>Temporary Commits</a
+              >
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-primary my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="top">
+      <h3>&DoubleUpArrow;</h3>
+    </div>
+    <div class="container">
+      <div class="row mt-3">
+
+        <div class="col-md-12 mt-2 col-12 col-lg-12 col-xs-12 col-sm-12 mx-auto">
+          <p class="text-left">
+            Git is the free and open source distributed version control system
+            that's responsible for everything GitHub related that happens
+            locally on your computer. This cheat sheet features the most
+            important and commonly used Git commands for easy reference.
+          </p>
+        </div> 
+      </div>
+
+      <div class="row mt-2">
+        <div
+          class="col-md-11 p-3 col-11 col-lg-11 box col-xs-11 col-sm-11 mx-auto"
+        >
+          <div class="center2">
+            <i class="fab fa-2x fa-github-square"></i>
+          </div>
+          <div class="card p-2 mt-2">
+            <img src="https://miro.medium.com/max/2000/1*Xx403T_zMP4ncZEtjIZlKQ.gif" alt="" class="card-img">
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div
+          class="col-md-11 p-3 col-11 col-lg-11 box col-xs-11 col-sm-11 mx-auto"
+        >
+          <div class="center2">
+            <i class="fab fa-2x fa-github-square"></i>
+          </div>
+          <h5 class="text-left mt-3 heading">INSTALLATION & GUIS</h5>
+          <p class="text-left">
+            With platform specific installers for Git, GitHub also provides the
+            ease of staying up-to-date with the latest releases of the command
+            line tool while providing a graphical user interface for day-to-day
+            interaction, review, and repository synchronization.
+          </p>
+          <h6 class="text-left mt-3 heading">GitHub For Windows</h6>
+          <a href="https://windows.github.com"
+            ><button class="git-button px-2 py-1 mt-3">Click Here</button></a
+          >
+
+          <h6 class="text-left mt-3 heading">GitHub For Mac</h6>
+          <a href="https://mac.github.com"
+            ><button class="git-button px-2 py-1 mt-3">Click Here</button></a
+          >
+          <p>
+            For Linux and Solaris platforms, the latest release is available on
+            the official Git web site.
+          </p>
+
+          <h6 class="text-left mt-3 heading">Git For All Platforms</h6>
+          <a href="http://git-scm.com"
+            ><button class="git-button px-2 py-1 mt-3">Click Here</button></a
+          >
+        </div>
+      </div>
+      <!-- setup  -->
+      <div class="row mt-2" id="setup">
+        <div
+          class="col-md-11 p-2 col-11 col-lg-11 box col-xs-11 col-sm-11 mx-auto"
+        >
+          <div class="center2">
+            <i class="fas fa-code-branch fa-2x"></i>
+          </div>
+          <h5 class="text-left mt-3 heading">SETUP COMMANDS</h5>
+          <p class="text-left">
+            Configuring user information used across all local repositories
+          </p>
+          <div class="setup"></div>
+        </div>
+      </div>
+      <!-- /setup-->
+
+      <!-- setup int -->
+      <div class="row mt-2" id="setupinit">
+        <div
+          class="col-md-11 p-2 col-11 col-lg-11 box col-xs-11 col-sm-11 mx-auto"
+        >
+          <div class="center2">
+            <i class="fab fa-2x fa-git-alt"></i>
+          </div>
+          <h5 class="text-left mt-3 heading">SETUP & INIT COMMANDS</h5>
+          <p class="text-left">
+            Configuring user information, initializing and cloning repositories
+          </p>
+          <div class="setupinit"></div>
+        </div>
+      </div>
+      <!-- /setup int -->
+
+      <!-- stage snapshot -->
+      <div class="row mt-2" id="stage">
+        <div
+          class="col-md-11 p-2 col-11 col-lg-11 box col-xs-11 col-sm-11 mx-auto"
+        >
+          <div class="center2">
+            <i class="fab fa-2x fa-git-alt"></i>
+          </div>
+          <h5 class="text-left mt-3 heading">STAGE & SNAPSHOT COMMANDS</h5>
+          <p class="text-left">
+            Working with snapshots and the Git staging area
+          </p>
+          <div class="stage"></div>
+        </div>
+      </div>
+      <!-- /stage snapshot -->
+
+      <!-- branch -->
+      <div class="row mt-2" id="branch">
+        <div
+          class="col-md-11 p-2 col-11 col-lg-11 box col-xs-11 col-sm-11 mx-auto"
+        >
+          <div class="center2">
+            <i class="fab fa-2x fa-git"></i>
+          </div>
+          <h5 class="text-left mt-3 heading">BRANCH & MERGE COMMANDS</h5>
+          <p class="text-left">
+            Isolating work in branches, changing context, and integrating
+            changes
+          </p>
+          <div class="branch"></div>
+        </div>
+      </div>
+      <!-- /branch -->
+
+      <!-- inspect -->
+      <div class="row mt-2" id="inspect">
+        <div
+          class="col-md-11 p-2 col-11 col-lg-11 box col-xs-11 col-sm-11 mx-auto"
+        >
+          <div class="center2">
+            <i class="fab fa-github-alt fa-2x"></i>
+          </div>
+          <h5 class="text-left mt-3 heading">INSPECT & COMPARE COMMANDS</h5>
+          <p class="text-left">Examining logs, diffs and object information</p>
+          <div class="inspect"></div>
+        </div>
+      </div>
+      <!-- /inspect -->
+
+      <!-- update -->
+      <div class="row mt-2" id="update">
+        <div
+          class="col-md-11 p-2 col-11 col-lg-11 box col-xs-11 col-sm-11 mx-auto"
+        >
+          <div class="center2">
+            <i class="fab fa-2x fa-git-alt"></i>
+          </div>
+          <h5 class="text-left mt-3 heading">SHARE & UPDATE COMMANDS</h5>
+          <p class="text-left">
+            Retrieving updates from another repository and updating local repos
+          </p>
+          <div class="update"></div>
+        </div>
+      </div>
+      <!-- /update -->
+
+      <!-- tracking -->
+      <div class="row mt-2" id="tracking">
+        <div
+          class="col-md-11 p-2 col-11 col-lg-11 box col-xs-11 col-sm-11 mx-auto"
+        >
+          <div class="center2">
+            <i class="fab fa-2x fa-git-alt"></i>
+          </div>
+          <h5 class="text-left mt-3 heading">TRACKING PATH CHANGES COMMANDS</h5>
+          <p class="text-left">Versioning file removes and path changes</p>
+          <div class="tracking"></div>
+        </div>
+      </div>
+      <!-- /tracking -->
+
+      <!-- history -->
+      <div class="row mt-2" id="history">
+        <div
+          class="col-md-11 p-2 col-11 col-lg-11 box col-xs-11 col-sm-11 mx-auto"
+        >
+          <div class="center2">
+            <i class="fab fa-gitkraken fa-2x"></i>
+          </div>
+          <h5 class="text-left mt-3 mb-4 heading">REWRITE HISTORY COMMANDS</h5>
+          <p class="text-left">
+            Rewriting branches, updating commits and clearing history
+          </p>
+          <div class="history"></div>
+        </div>
+      </div>
+      <!-- /history -->
+
+      <!-- temp -->
+      <div class="row mt-2" id="temp">
+        <div
+          class="col-md-11 p-2 col-11 col-lg-11 box col-xs-11 col-sm-11 mx-auto"
+        >
+          <div class="center2">
+            <i class="fab fa-2x fa-git-alt"></i>
+          </div>
+          <h5 class="text-left mt-3 heading">TEMPORARY COMMITS COMMANDS</h5>
+          <p class="text-left">
+            Temporarily store modified, tracked files in order to change
+            branches
+          </p>
+          <div class="temp"></div>
+        </div>
+      </div>
+      <!-- /temp -->
+    </div>
+    <div class="container-fluid" style="background-color: yellow">
+      <footer id="footer">
+        <div class="row mt-3">
+          <div class="col-md-4 mt-4 col-12 col-xs-4 col-sm-4 col-lg-4 mx-auto">
+            <h5 class="text-center">
+              LOCATION <i class="fas fa-location-arrow mx-2"></i>
+            </h5>
+            <p class="text-center">
+              Some Where In India !(The Country Of Love ❤️)
+            </p>
+          </div>
+
+          <div class="col-md-4 mt-4 mb-4 col-12 col-xs-4 col-sm-4 col-lg-4 mx-auto">
+            <h5 class="text-center text-uppercase">Around The Web</h5>
+            <div class="d-flex justify-content-around">
+              <div
+                class="center2"
+                style="background-color: yellow; border: 2px solid white"
+              >
+                <a href="https://www.instagram.com/nikku_choubisa/"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+              <div
+                class="center2"
+                style="background-color: yellow; border: 2px solid white"
+              >
+                <a href="https://www.linkedin.com/in/neeraj-choubisa-a4952b202/"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+
+              <div
+                class="center2"
+                style="background-color: yellow; border: 2px solid white"
+              >
+                <a
+                  href="https://www.facebook.com/profile.php?id=100010725183223"
+                  ><i class="fab fa-facebook-square"></i
+                ></a>
+              </div>
+
+              <div
+                class="center2"
+                style="background-color: yellow; border: 2px solid white"
+              >
+                <a href="https://github.com/Kali-Decoder"
+                  ><i class="fab fa-github-square"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-4 mb-4 col-12 col-xs-4 col-sm-4 col-lg-4 mx-auto">
+            <h5 class="text-center text-uppercase">About</h5>
+            <p class="text-center">Full Stack Web Developer (Frontend && Backend )</p>
+        </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="git.js"></script>
+  </body>
+</html>
